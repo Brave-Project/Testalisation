@@ -1,0 +1,43 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Code/Menu.gd" type="Script" id=1]
+[ext_resource path="res://Code/VarGlobal.gd" type="Script" id=2]
+[ext_resource path="res://Code/BDD.gd" type="Script" id=3]
+
+[node name="Menu" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="Bdd" type="Node" parent="."]
+script = ExtResource( 3 )
+
+[node name="VarGlobal" type="Node" parent="."]
+script = ExtResource( 2 )
+
+[node name="Label" type="Label" parent="."]
+margin_left = 236.0
+margin_top = 68.0
+margin_right = 388.0
+margin_bottom = 118.0
+rect_scale = Vector2( 4, 4 )
+text = "Brave
+Tourterelle D'Attaque"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="."]
+margin_left = 424.0
+margin_top = 352.0
+margin_right = 648.0
+margin_bottom = 402.0
+text = "Appuyer sur espace pour continuer"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LabelTimer" type="Timer" parent="Label2"]
+[connection signal="timeout" from="Label2/LabelTimer" to="." method="_on_LabelTimer_timeout"]

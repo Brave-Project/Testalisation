@@ -20,7 +20,8 @@ margin_right = 388.0
 margin_bottom = 118.0
 rect_scale = Vector2( 4, 4 )
 text = "Brave
-Tourterelle D'Attaque"
+Tourterelle D'Attaque
+Le super jeu"
 align = 1
 valign = 1
 __meta__ = {

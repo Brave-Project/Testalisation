@@ -7,7 +7,11 @@ var Player = {
 	Degats = 10,
 	AttSpeed=1,
 	BulSpeed=300,
-	Bombes=3
+	Bombes=3,
+	pos={
+		x=0,
+		y=0
+	}
 }
 var Boss=500
 var level=1

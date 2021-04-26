@@ -1,11 +1,20 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://Code/Niveau1.gd" type="Script" id=1]
 [ext_resource path="res://Code/SpawnPiece.gd" type="Script" id=2]
+[ext_resource path="res://Image/FondTest.png" type="Texture" id=3]
 
 [node name="Niveau1" type="Node2D"]
 script = ExtResource( 1 )
 
+[node name="FondTest" type="Sprite" parent="."]
+position = Vector2( 32, 0 )
+texture = ExtResource( 3 )
+
+[node name="FondTest2" type="Sprite" parent="."]
+position = Vector2( 352, 0 )
+texture = ExtResource( 3 )
+
 [node name="Piece1" type="Node2D" parent="."]
-position = Vector2( 288, 0 )
+position = Vector2( 272, -48 )
 script = ExtResource( 2 )

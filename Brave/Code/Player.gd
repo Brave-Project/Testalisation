@@ -11,8 +11,6 @@ func _physics_process(delta):
 	_MovementLoop()
 	$Timer.wait_time=VarGlobal.Player.AttSpeed
 	speed = VarGlobal.Player.Speed
-	VarGlobal.Player.pos.x=position.x
-	VarGlobal.Player.pos.y=position.y
 	pass
 func _MovementLoop():
 	var DirX = int(Input.is_action_pressed("ui_right"))-int(Input.is_action_pressed("ui_left"))

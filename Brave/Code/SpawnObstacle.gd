@@ -9,6 +9,6 @@ func _ready():
 func _on_Timer_timeout():
 	var Scene=load("res://Scene/Obstacle.tscn")
 	var Obs = Scene.instance()
-	add_child(Obs)
-	Obs.global_position=global_position
+	#add_child(Obs)
+	#Obs.global_position=global_position
 	pass # Replace with function body.

@@ -7,15 +7,11 @@ var Player = {
 	Degats = 10,
 	AttSpeed=1,
 	BulSpeed=300,
-	Bombes=3,
-	pos={
-		x=0,
-		y=0
-	}
+	Bombes=3
 }
 var Boss=500
 var level=1
-var CameraSpeed=1
+var CameraSpeed=0
 
 func _physics_process(delta):
 	if Player.Vie==0:

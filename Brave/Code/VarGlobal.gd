@@ -10,7 +10,7 @@ var Player = {
 	Bombes=3
 }
 var Boss=500
-var level=1
+var level=2
 var CameraSpeed=0
 
 func _physics_process(delta):

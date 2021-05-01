@@ -14,10 +14,10 @@ script = ExtResource( 3 )
 script = ExtResource( 2 )
 
 [node name="Label" type="Label" parent="."]
-margin_left = 236.0
-margin_top = 68.0
-margin_right = 386.0
-margin_bottom = 118.0
+margin_left = 233.0
+margin_top = 70.0
+margin_right = 383.0
+margin_bottom = 120.0
 rect_scale = Vector2( 4, 4 )
 text = "Brave
 Tourterelle D'Attaque"

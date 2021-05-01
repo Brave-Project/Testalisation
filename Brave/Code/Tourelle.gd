@@ -1,5 +1,5 @@
 extends Area2D
-var Balle = preload("res://Scene/BalleTourelle.tscn")
+var Balle = preload("res://Scene/BalleJimmie.tscn")
 
 # Declare member variables here. Examples:
 # var a = 2

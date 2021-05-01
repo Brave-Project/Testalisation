@@ -22,4 +22,4 @@ position = Vector2( 32, 0 )
 position = Vector2( -64, 0 )
 
 [node name="Tourelle" parent="." instance=ExtResource( 2 )]
-position = Vector2( 224, -96 )
+position = Vector2( 1120, -96 )

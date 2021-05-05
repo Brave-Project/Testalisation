@@ -11,7 +11,7 @@ var Player = {
 }
 var Boss=500
 var level=1
-var CameraSpeed=0
+var CameraSpeed=1
 
 func _physics_process(delta):
 	if Player.Vie==0:

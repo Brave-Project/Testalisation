@@ -40,4 +40,5 @@ __meta__ = {
 }
 
 [node name="LabelTimer" type="Timer" parent="Label2"]
+autostart = true
 [connection signal="timeout" from="Label2/LabelTimer" to="." method="_on_LabelTimer_timeout"]

@@ -1,5 +1,5 @@
 extends Node
-var Argent=0
+var Argent=3
 var Score=0
 var Player = {
 	Vie=3,
@@ -11,7 +11,7 @@ var Player = {
 }
 var Boss=500
 var level=1
-var CameraSpeed=1
+var CameraSpeed=0
 
 func _physics_process(delta):
 	if Player.Vie==0:

@@ -1,6 +1,5 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=6 format=2]
 
-[ext_resource path="res://Code/SpawnObstacle.gd" type="Script" id=3]
 [ext_resource path="res://Code/Camera2D.gd" type="Script" id=4]
 [ext_resource path="res://Code/Score.gd" type="Script" id=5]
 
@@ -28,18 +27,11 @@ margin_left = -252.0
 margin_top = -148.0
 margin_right = -212.0
 margin_bottom = -134.0
-custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
 script = ExtResource( 5 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
-
-[node name="Obstacle" type="Node2D" parent="Camera2D"]
-position = Vector2( 280, 0 )
-script = ExtResource( 3 )
-
-[node name="Timer" type="Timer" parent="Camera2D/Obstacle"]
-wait_time = 2.0
 
 [node name="Bordure" type="StaticBody2D" parent="Camera2D"]
 position = Vector2( -236, 0 )
@@ -59,4 +51,3 @@ shape = SubResource( 2 )
 [node name="CollisionBas" type="CollisionShape2D" parent="Camera2D/Bordure"]
 position = Vector2( 236, 140 )
 shape = SubResource( 3 )
-[connection signal="timeout" from="Camera2D/Obstacle/Timer" to="Camera2D/Obstacle" method="_on_Timer_timeout"]

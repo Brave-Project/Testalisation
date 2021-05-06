@@ -25,6 +25,18 @@ func _physics_process(delta):
 	$NbPiece.set_text(String(Piece))
 	$Chance.set_text(String(Chance)+"% de Chance")
 	
+	if Input.is_action_just_pressed("ui_accept"):
+		var r = int(rand_range(0,5))
+		if r==1:
+			$Sprite/Icone.texture=load("res://Image/IconeAttSpeed.png")
+		elif r==2:
+			$Sprite/Icone.texture=load("res://Image/IconeBulSpeed.png")
+		elif r==3:
+			$Sprite/Icone.texture=load("res://Image/IconeDegats.png")
+		elif r==4:
+			$Sprite/Icone.texture=load("res://Image/IconeSpeed.png")
+		else:
+			$Sprite/Icone.texture=load("res://Image/IconeRien.png")
 	pass
 
 

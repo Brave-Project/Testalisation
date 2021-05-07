@@ -1,5 +1,5 @@
 extends Node
-var Argent=3
+var Argent=200
 var Score=0
 var Player = {
 	Vie=3,

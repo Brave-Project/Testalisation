@@ -22,10 +22,10 @@ texture = ExtResource( 1 )
 [node name="Camera" parent="." instance=ExtResource( 2 )]
 
 [node name="CbPiece" type="Label" parent="."]
-margin_left = 288.0
-margin_top = -64.0
-margin_right = 448.0
-margin_bottom = -32.0
+margin_left = 96.0
+margin_top = -128.0
+margin_right = 288.0
+margin_bottom = -96.0
 text = "Combien de pieces ?"
 align = 1
 valign = 1
@@ -34,9 +34,9 @@ __meta__ = {
 }
 
 [node name="NbPiece" type="Label" parent="."]
-margin_left = 352.0
+margin_left = 320.0
 margin_top = -16.0
-margin_right = 416.0
+margin_right = 384.0
 margin_bottom = 48.0
 text = "0"
 align = 1
@@ -46,19 +46,19 @@ __meta__ = {
 }
 
 [node name="FlecheHaut" type="Sprite" parent="."]
-position = Vector2( 384, -16 )
+position = Vector2( 352, -16 )
 texture = ExtResource( 4 )
 
 [node name="FlecheBas" type="Sprite" parent="."]
-position = Vector2( 384, 48 )
+position = Vector2( 352, 48 )
 rotation = 3.14159
 texture = ExtResource( 4 )
 
 [node name="Chance" type="Label" parent="."]
 margin_left = -32.0
-margin_top = -64.0
+margin_top = 96.0
 margin_right = 66.0
-margin_bottom = -32.0
+margin_bottom = 128.0
 text = "50% de Chance"
 align = 1
 valign = 1

@@ -3,7 +3,10 @@ extends Node2D
 var Piece=0
 var Chance=0
 var TrueChance=8
-# Declare member variables here. Examples:
+
+func _ready():
+	VarGlobal.CameraSpeed=0
+	pass
 
 func _physics_process(delta):
 	$Camera/Camera2D/Score.Texte="Piece "+String(VarGlobal.Argent)

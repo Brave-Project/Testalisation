@@ -6,11 +6,12 @@ func _ready():
 	pass # Replace with function body.
 
 func _physics_process(delta):
+	$Timer.wait_time=VarGlobal.Player.AttSpeed
+	speed = VarGlobal.Player.Speed
 	if (Input.is_action_pressed("ui_accept")):
 		Shoot()
 	_MovementLoop()
-	$Timer.wait_time=VarGlobal.Player.AttSpeed
-	speed = VarGlobal.Player.Speed
+
 	pass
 func _MovementLoop():
 	var DirX = int(Input.is_action_pressed("ui_right"))-int(Input.is_action_pressed("ui_left"))

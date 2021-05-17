@@ -1,5 +1,5 @@
 extends Node
-var Argent=0
+var Argent=200
 var Score=0
 var Player = {
 	Vie=3,
@@ -10,11 +10,13 @@ var Player = {
 	Bombes=3
 }
 var Boss=500
-var level=2
-var CameraSpeed=0
+
+var level=1
+var CameraSpeed=1
+
 
 func _physics_process(delta):
-	if Player.Vie==0:
+	if Player.Vie<=0:
 		GameOver()
 	pass	
 func get_Argent():
@@ -28,6 +30,7 @@ func get_CameraSpeed():
 	pass
 func PlayerVie_moins():
 	Player.Vie-=1
+	
 	pass
 func Score_Plus(add):
 	Score+=add

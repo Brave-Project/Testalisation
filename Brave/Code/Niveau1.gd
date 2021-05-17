@@ -1,6 +1,6 @@
 extends Node2D
 func _ready():
-	VarGlobal.CameraSpeed=1
+	VarGlobal.CameraSpeed=0
 	pass
 
 func _physics_process(delta):

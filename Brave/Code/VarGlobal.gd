@@ -11,7 +11,7 @@ var Player = {
 }
 var Boss=500
 
-var level=1
+var level=2
 var CameraSpeed=1
 
 

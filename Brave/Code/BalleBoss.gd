@@ -17,3 +17,9 @@ func _physics_process(delta):
 	velocity = velocity.clamped(speed)
 	#rotation = velocity.angle()
 	global_position += velocity * delta
+
+
+func _on_BalleJimmie_body_entered(body):
+	if body.name=="Brave":
+		VarGlobal.PlayerVie_moins()
+	pass # Replace with function body.

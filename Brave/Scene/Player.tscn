@@ -22,3 +22,6 @@ texture = ExtResource( 2 )
 
 [node name="Timer" type="Timer" parent="Brave"]
 one_shot = true
+
+[node name="Hit" type="Timer" parent="Brave"]
+[connection signal="timeout" from="Brave/Hit" to="Brave" method="_on_Hit_timeout"]

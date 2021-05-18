@@ -5,7 +5,7 @@
 [ext_resource path="res://Image/LifeBarre.png" type="Texture" id=3]
 
 [sub_resource type="CircleShape2D" id=1]
-radius = 16.0
+radius = 32.0
 
 [node name="Jimmie" type="Node2D"]
 __meta__ = {
@@ -17,18 +17,35 @@ script = ExtResource( 2 )
 
 [node name="Sprite" type="Sprite" parent="Jimmie"]
 texture = ExtResource( 1 )
-region_enabled = true
 region_rect = Rect2( 0, 0, 32, 32 )
+
+[node name="LifeBarre" type="Sprite" parent="Jimmie"]
+position = Vector2( 9.53674e-07, 32 )
+scale = Vector2( 2, 1 )
+texture = ExtResource( 3 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Jimmie"]
 shape = SubResource( 1 )
 
-[node name="Timer" type="Timer" parent="Jimmie"]
+[node name="TimerPhase1" type="Timer" parent="Jimmie"]
 wait_time = 0.5
-autostart = true
 
-[node name="LifeBarre" type="Sprite" parent="Jimmie"]
-position = Vector2( 0, 20 )
-texture = ExtResource( 3 )
+[node name="TimerTotalPhase1" type="Timer" parent="Jimmie"]
+wait_time = 10.0
+
+[node name="TimerPhase2" type="Timer" parent="Jimmie"]
+wait_time = 3.0
+
+[node name="TimerTotalPhase2" type="Timer" parent="Jimmie"]
+wait_time = 10.0
+
+[node name="TimerPhase" type="Timer" parent="Jimmie"]
+wait_time = 3.0
+autostart = true
 [connection signal="area_entered" from="Jimmie" to="Jimmie" method="_on_Jimmie_area_entered"]
-[connection signal="timeout" from="Jimmie/Timer" to="Jimmie" method="_on_Timer_timeout"]
+[connection signal="body_entered" from="Jimmie" to="Jimmie" method="_on_Jimmie_body_entered"]
+[connection signal="timeout" from="Jimmie/TimerPhase1" to="Jimmie" method="_on_TimerPhase1_timeout"]
+[connection signal="timeout" from="Jimmie/TimerTotalPhase1" to="Jimmie" method="_on_TimerTotalPhase1_timeout"]
+[connection signal="timeout" from="Jimmie/TimerPhase2" to="Jimmie" method="_on_TimerPhase2_timeout"]
+[connection signal="timeout" from="Jimmie/TimerTotalPhase2" to="Jimmie" method="_on_TimerTotalPhase2_timeout"]
+[connection signal="timeout" from="Jimmie/TimerPhase" to="Jimmie" method="_on_TimerPhase_timeout"]

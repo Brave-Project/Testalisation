@@ -7,13 +7,12 @@ var Player = {
 	Degats = 10,
 	AttSpeed=1,
 	BulSpeed=300,
-	Bombes=3
+	Bombes=3,
+	Hit=0
 }
 var Boss=500
-
 var level=2
 var CameraSpeed=1
-
 
 func _physics_process(delta):
 	if Player.Vie<=0:
@@ -29,8 +28,9 @@ func get_CameraSpeed():
 	return CameraSpeed
 	pass
 func PlayerVie_moins():
-	Player.Vie-=1
-	
+	if Player.Hit==0:
+		Player.Vie-=1
+		Player.Hit=1
 	pass
 func Score_Plus(add):
 	Score+=add

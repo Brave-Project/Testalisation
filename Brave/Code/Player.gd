@@ -8,6 +8,13 @@ func _ready():
 func _physics_process(delta):
 	$Timer.wait_time=VarGlobal.Player.AttSpeed
 	speed = VarGlobal.Player.Speed
+	if VarGlobal.Player.Hit==1:
+		if $Hit.is_stopped():
+			$Hit.start()
+		if $Sprite.visible==true:
+			$Sprite.visible=false
+		else:
+			$Sprite.visible=true
 	if (Input.is_action_pressed("ui_accept")):
 		Shoot()
 	_MovementLoop()
@@ -39,3 +46,9 @@ func Shoot():
 		Bul.global_position=$Tir.global_position
 		$Timer.start()
 pass
+
+
+func _on_Hit_timeout():
+	VarGlobal.Player.Hit=0
+	$Sprite.visible=true
+	pass # Replace with function body.

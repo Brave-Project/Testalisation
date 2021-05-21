@@ -17,7 +17,8 @@ script = ExtResource( 2 )
 
 [node name="Sprite" type="Sprite" parent="Jimmie"]
 texture = ExtResource( 1 )
-region_rect = Rect2( 0, 0, 32, 32 )
+region_enabled = true
+region_rect = Rect2( 0, 0, 64, 64 )
 
 [node name="LifeBarre" type="Sprite" parent="Jimmie"]
 position = Vector2( 9.53674e-07, 32 )
@@ -34,7 +35,7 @@ wait_time = 0.5
 wait_time = 10.0
 
 [node name="TimerPhase2" type="Timer" parent="Jimmie"]
-wait_time = 3.0
+wait_time = 2.0
 
 [node name="TimerTotalPhase2" type="Timer" parent="Jimmie"]
 wait_time = 10.0

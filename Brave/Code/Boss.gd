@@ -20,6 +20,8 @@ func _physics_process(delta):
 		Vect.x=-1
 	elif $TimerTotalPhase2.is_stopped():
 		Vect.x=0
+	else:
+		Vect.y=0
 	position+=Vect
 	if Phase==1:
 		Phase1()
@@ -33,7 +35,7 @@ func Phase1():
 	pass
 func Phase2():
 	Phase=0
-	Vect.x=-20
+	$Sprite.region_rect=Rect2(0,64,64,64)
 	$TimerPhase2.start()
 	$TimerTotalPhase2.start()
 	pass
@@ -67,14 +69,16 @@ func _on_TimerTotalPhase1_timeout():
 
 
 func _on_TimerPhase2_timeout():
-	position.x=100
-	position.y=rand_range(-120,120)
-	print(position)
+	if position.x!=0:
+		position.x=100
+		position.y=rand_range(-120,120)
+	Vect.x=-15
 	pass # Replace with function body.
 
 func _on_TimerTotalPhase2_timeout():
 	position.y=0
 	position.x=100
+	$Sprite.region_rect=Rect2(0,0,64,64)
 	$TimerPhase2.stop()
 	$TimerTotalPhase2.stop()
 	$TimerPhase.start()

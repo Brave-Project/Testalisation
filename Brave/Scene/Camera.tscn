@@ -1,5 +1,6 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
+[ext_resource path="res://Code/Spawn.gd" type="Script" id=1]
 [ext_resource path="res://Code/Camera2D.gd" type="Script" id=4]
 [ext_resource path="res://Code/Score.gd" type="Script" id=5]
 
@@ -51,3 +52,12 @@ shape = SubResource( 2 )
 [node name="CollisionBas" type="CollisionShape2D" parent="Camera2D/Bordure"]
 position = Vector2( 236, 140 )
 shape = SubResource( 3 )
+
+[node name="Spawn" type="Node2D" parent="Camera2D"]
+position = Vector2( 568, 0 )
+script = ExtResource( 1 )
+
+[node name="Timer" type="Timer" parent="Camera2D/Spawn"]
+wait_time = 10.0
+autostart = true
+[connection signal="timeout" from="Camera2D/Spawn/Timer" to="Camera2D/Spawn" method="_on_Timer_timeout"]

@@ -15,7 +15,7 @@ func _on_Timer_timeout():
 
 
 func _on_Tourelle_area_entered(area):
-	if area.name=="Bullet":
+	if area.name=="Bullet" and tir==1:
 		area.queue_free()
 		queue_free()
 		VarGlobal.Score_Plus(1000)

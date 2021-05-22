@@ -2,20 +2,15 @@ extends Area2D
 
 var Vect=Vector2(-300,0)
 var Shift=rand_range(-2,2)
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	$Timer.start()
-	pass # Replace with function body.
-func _physics_process(delta):
-	if (position.y>=125) or (position.y<=-125):
-		Shift*=-1
-	Vect.y=100*Shift
-	$Obstacle.move_and_slide(Vect,Vect)
-	position=$Obstacle.position
-	pass
+var Move=0
 
-func _on_Timer_timeout():
-	queue_free()
+func _physics_process(delta):
+	if Move==1:
+		if (position.y>=125) or (position.y<=-125):
+			Shift*=-1
+		Vect.y=100*Shift
+		$Obstacle.move_and_slide(Vect,Vect)
+		position=$Obstacle.position
 	pass # Replace with function body.
 
 func _on_Obs_body_shape_entered(body_id, body, body_shape, area_shape):
@@ -26,8 +21,18 @@ func _on_Obs_body_shape_entered(body_id, body, body_shape, area_shape):
 
 
 func _on_Obs_area_entered(area):
-	if area.name=="Bullet":
+	if area.name=="Bullet" and Move==1:
 		area.queue_free()
 		queue_free()
 		VarGlobal.Score_Plus(500)
+	pass # Replace with function body.
+
+
+func _on_VisibilityNotifier2D_screen_entered():
+	Move=1
+	pass # Replace with function body.
+
+
+func _on_VisibilityNotifier2D_screen_exited():
+	queue_free()
 	pass # Replace with function body.

@@ -1,39 +1,18 @@
-<?xml version="1.0" encoding="UTF-8"?><sqlb_project><db path="C:/Users/poiss/OneDrive/Bureau/Brave/Database/brave.db" readonly="0" foreign_keys="1" case_sensitive_like="0" temp_store="0" wal_autocheckpoint="1000" synchronous="2"/><attached/><window><main_tabs open="structure browser pragmas query" current="1"/></window><tab_structure><column_width id="0" width="300"/><column_width id="1" width="0"/><column_width id="2" width="125"/><column_width id="3" width="1923"/><column_width id="4" width="0"/><expanded_item id="0" parent="1"/><expanded_item id="1" parent="1"/><expanded_item id="2" parent="1"/><expanded_item id="3" parent="1"/></tab_structure><tab_browse><current_table name="4,5:mainScore"/><default_encoding codec=""/><browse_table_settings><table schema="main" name="Joueur" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_"><sort/><column_widths><column index="1" value="52"/><column index="2" value="73"/></column_widths><filter_values/><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table><table schema="main" name="Niveau" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_"><sort/><column_widths><column index="1" value="52"/><column index="2" value="66"/></column_widths><filter_values/><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table><table schema="main" name="Partie" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_"><sort/><column_widths><column index="1" value="52"/><column index="2" value="99"/></column_widths><filter_values/><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table><table schema="main" name="Score" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_"><sort/><column_widths><column index="1" value="52"/><column index="2" value="82"/><column index="3" value="90"/><column index="4" value="99"/></column_widths><filter_values/><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table></browse_table_settings></tab_browse><tab_sql><sql name="SQL 1">CREATE TABLE Joueur(
+<?xml version="1.0" encoding="UTF-8"?><sqlb_project><db path="C:/Users/poiss/OneDrive/Bureau/BraveGit/Testalisation/Brave/Database/brave.db" readonly="0" foreign_keys="1" case_sensitive_like="0" temp_store="0" wal_autocheckpoint="1000" synchronous="2"/><attached/><window><main_tabs open="structure browser pragmas query" current="1"/></window><tab_structure><column_width id="0" width="300"/><column_width id="1" width="0"/><column_width id="2" width="125"/><column_width id="3" width="1477"/><column_width id="4" width="0"/><expanded_item id="0" parent="1"/><expanded_item id="1" parent="1"/><expanded_item id="2" parent="1"/><expanded_item id="3" parent="1"/></tab_structure><tab_browse><current_table name="4,6:mainPartie"/><default_encoding codec=""/><browse_table_settings><table schema="main" name="Partie" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_"><sort/><column_widths><column index="1" value="52"/><column index="2" value="73"/><column index="3" value="58"/><column index="4" value="66"/></column_widths><filter_values/><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table></browse_table_settings></tab_browse><tab_sql><sql name="SQL 1">CREATE TABLE Joueur(
    Id INTEGER,
    Pseudo VARCHAR(50) NOT NULL,
    PRIMARY KEY(&quot;Id&quot; AUTOINCREMENT)
 );
 
-CREATE TABLE Niveau(
-   Id INTEGER,
-   Libelle VARCHAR(50),
-   PRIMARY KEY(&quot;Id&quot; AUTOINCREMENT)
-);
+
 
 CREATE TABLE Partie(
    Id INTEGER,
    Id_Joueur INT NOT NULL,
+   Score INT,
+   Temps TIME,
    PRIMARY KEY(&quot;Id&quot; AUTOINCREMENT),
    FOREIGN KEY(Id_Joueur) REFERENCES Joueur(Id)
 );
 
-CREATE TABLE Score(
-   Id INTEGER,
-   Montant VARCHAR(50),
-   Id_Partie INT NOT NULL,
-   Id_Niveau INT NOT NULL,
-   PRIMARY KEY(&quot;Id&quot; AUTOINCREMENT),
-   FOREIGN KEY(Id_Partie) REFERENCES Partie(Id),
-   FOREIGN KEY(Id_Niveau) REFERENCES Niveau(Id)
-);
-
-CREATE TABLE Temps(
-   Id INTEGER,
-   Montant INT,
-   Id_Niveau INT NOT NULL,
-   Id_Partie INT NOT NULL,
-   PRIMARY KEY(&quot;Id&quot; AUTOINCREMENT),
-   FOREIGN KEY(Id_Niveau) REFERENCES Niveau(Id),
-   FOREIGN KEY(Id_Partie) REFERENCES Partie(Id)
-);
 </sql><current_tab id="0"/></tab_sql></sqlb_project>

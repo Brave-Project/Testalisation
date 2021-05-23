@@ -12,21 +12,22 @@ position = Vector2( 64, -64 )
 position = Vector2( 64, 64 )
 
 [node name="Tourelle3" parent="." instance=ExtResource( 2 )]
-position = Vector2( 192, -64 )
+position = Vector2( 224, -64 )
 
 [node name="Tourelle4" parent="." instance=ExtResource( 2 )]
-position = Vector2( 192, 64 )
+position = Vector2( 224, 64 )
 
 [node name="Mur" parent="." instance=ExtResource( 1 )]
-position = Vector2( 0, -64 )
+position = Vector2( 0, -96 )
 
 [node name="Mur2" parent="." instance=ExtResource( 1 )]
-position = Vector2( 0, -32 )
+position = Vector2( 160, -96 )
 
 [node name="Mur3" parent="." instance=ExtResource( 1 )]
+position = Vector2( 160, 96 )
 
 [node name="Mur4" parent="." instance=ExtResource( 1 )]
-position = Vector2( 0, 64 )
+position = Vector2( 0, 96 )
 
 [node name="Mur5" parent="." instance=ExtResource( 1 )]
-position = Vector2( 0, 32 )
+position = Vector2( -64, 0 )

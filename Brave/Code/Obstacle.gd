@@ -25,6 +25,10 @@ func _on_Obs_area_entered(area):
 		area.queue_free()
 		queue_free()
 		VarGlobal.Score_Plus(500)
+		if rand_range(0,5)>=4:
+			var Bonus = load("res://Scene/Bonus.tscn")
+			var Bon=Bonus.instance()
+			get_tree().get_root().add_child(Bon)
 	pass # Replace with function body.
 
 

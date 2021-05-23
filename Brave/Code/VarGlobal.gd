@@ -32,6 +32,8 @@ func PlayerVie_moins():
 		Player.Vie-=1
 		Player.Hit=1
 	pass
+func PlayerVie_plus():
+	Player.Vie+=1
 func Score_Plus(add):
 	Score+=add
 	pass

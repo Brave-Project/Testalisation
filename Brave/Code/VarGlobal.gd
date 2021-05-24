@@ -17,7 +17,19 @@ var CameraSpeed=1
 func _physics_process(delta):
 	if Player.Vie<=0:
 		GameOver()
-	pass	
+	pass
+func Player_reset():
+	Player = {
+		Vie=3,
+		Speed = 200,
+		Degats = 10,
+		AttSpeed=1,
+		BulSpeed=300,
+		Bombes=3,
+		Hit=0
+	}
+	pass
+	
 func get_Argent():
 	return Argent
 	pass

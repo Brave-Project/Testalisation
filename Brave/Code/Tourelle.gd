@@ -1,6 +1,7 @@
 extends Area2D
 
 var Balle = preload("res://Scene/BalleTourelle.tscn")
+var Bonus = preload("res://Scene/Bonus.tscn")
 var tir=0
 
 func _ready():
@@ -20,9 +21,9 @@ func _on_Tourelle_area_entered(area):
 		queue_free()
 		VarGlobal.Score_Plus(1000)
 		if rand_range(0,5)>=4:
-			var Bonus = load("res://Scene/Bonus.tscn")
 			var Bon=Bonus.instance()
 			get_tree().get_root().add_child(Bon)
+			Bon.position=global_position
 	pass # Replace with function body.
 
 

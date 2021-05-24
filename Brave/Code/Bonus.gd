@@ -12,6 +12,7 @@ func _ready():
 
 func _on_Bonus_body_entered(body):
 	if body.name=="Brave":
+		queue_free()
 		if rand==0:
 			VarGlobal.PlayerAttSpeed_Plus()
 		elif rand==32:

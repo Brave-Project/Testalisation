@@ -1,11 +1,11 @@
 extends Node2D
 var Shift=5
 func _ready():
-	VarGlobal.Player.Vie=3
+	VarGlobal.Player_reset()
 	pass
 
 func _physics_process(delta):
-	if Input.is_action_just_released("ui_accept"):
+	if Input.is_action_just_pressed("ui_accept"):
 		if $Choix.position.y==288:
 			get_tree().change_scene("res://Scene/Score.tscn")
 		elif $Choix.position.y==352:

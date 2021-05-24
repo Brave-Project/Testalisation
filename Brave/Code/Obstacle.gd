@@ -29,6 +29,7 @@ func _on_Obs_area_entered(area):
 			var Bonus = load("res://Scene/Bonus.tscn")
 			var Bon=Bonus.instance()
 			get_tree().get_root().add_child(Bon)
+			Bon.position=global_position
 	pass # Replace with function body.
 
 

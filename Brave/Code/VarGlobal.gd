@@ -10,9 +10,9 @@ var Player = {
 	Bombes=3,
 	Hit=0
 }
-var Boss=500
 var level=1
 var CameraSpeed=1
+var CountSitu=0
 
 func _physics_process(delta):
 	if Player.Vie<=0:
@@ -64,10 +64,8 @@ func PlayerBulSpeed_Plus():
 func PlayerBombes_Plus():
 	Player.Bombes+=1
 	pass
-func HitBoss():
-	Boss-=Player.Degats
-	if Boss>=0:
-		GameOver()
+func CountSitu_Plus():
+	CountSitu+=1
 	pass
 func GameOver():
 	get_tree().change_scene("res://Scene/Game_Over.tscn")

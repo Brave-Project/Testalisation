@@ -2,6 +2,7 @@ extends Node2D
 var Shift=5
 func _ready():
 	VarGlobal.Player_reset()
+	VarGlobal.CountSitu=0
 	pass
 
 func _physics_process(delta):

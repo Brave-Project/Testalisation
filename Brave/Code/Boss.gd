@@ -57,6 +57,8 @@ func _on_Jimmie_area_entered(area):
 		Pv-= VarGlobal.Player.Degats
 		VarGlobal.Score_Plus(1000)
 	if Pv <=0:
+		VarGlobal.CameraSpeed=1
+		VarGlobal.CountSitu=0
 		queue_free()
 	pass # Replace with function body.
 
@@ -92,6 +94,5 @@ func _on_Jimmie_body_entered(body):
 
 func _on_TimerPhase_timeout():
 	Phase=int(rand_range(1,3))
-	print(Phase)
 	$TimerPhase.stop()
 	pass # Replace with function body.
